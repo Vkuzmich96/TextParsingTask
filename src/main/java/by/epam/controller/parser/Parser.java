@@ -1,6 +1,6 @@
-package controller.parser;
+package by.epam.controller.parser;
 
-import controller.ControllerException;
+import by.epam.controller.ControllerException;
 
 import java.nio.file.Path;
 

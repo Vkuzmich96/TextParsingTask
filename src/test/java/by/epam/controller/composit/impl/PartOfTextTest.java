@@ -1,10 +1,8 @@
-package bean.impl;
+package by.epam.controller.composit.impl;
 
-import bean.PartOfTextKind;
+import by.epam.controller.composit.PartOfTextKind;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class PartOfTextTest {
 

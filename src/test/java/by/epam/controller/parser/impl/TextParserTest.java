@@ -1,6 +1,6 @@
-package controller.parser.impl;
+package by.epam.controller.parser.impl;
 
-import controller.ControllerException;
+import by.epam.controller.ControllerException;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

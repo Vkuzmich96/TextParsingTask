@@ -1,7 +1,7 @@
-package controller.parser.impl;
+package by.epam.controller.parser.impl;
 
-import controller.ControllerException;
-import controller.parser.Parser;
+import by.epam.controller.ControllerException;
+import by.epam.controller.parser.Parser;
 
 import java.io.IOException;
 import java.nio.file.Files;

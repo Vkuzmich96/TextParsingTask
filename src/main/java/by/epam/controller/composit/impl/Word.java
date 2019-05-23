@@ -1,6 +1,6 @@
-package bean.impl;
+package by.epam.controller.composit.impl;
 
-import bean.Ellyment;
+import by.epam.controller.composit.Ellyment;
 
 public class Word implements Ellyment {
 
