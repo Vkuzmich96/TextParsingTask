@@ -7,16 +7,16 @@ import by.epam.controller.composit.PartOfTextKind;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PartOfText implements Container {
+public class PartOfTextContainer implements Container {
     private PartOfTextKind kind;
     private List<Ellyment> list;
 
-    public PartOfText(PartOfTextKind kind, List<Ellyment> list) {
+    public PartOfTextContainer(PartOfTextKind kind, List<Ellyment> list) {
         this.kind = kind;
         this.list = list;
     }
 
-    public PartOfText(PartOfTextKind kind) {
+    public PartOfTextContainer(PartOfTextKind kind) {
         this.kind = kind;
     }
 
@@ -28,8 +28,8 @@ public class PartOfText implements Container {
     @Override
     public String get() {
         return list.stream()
-                .map(Ellyment::get)
-                .collect(Collectors.joining(" "))
-                + kind.getSplitter();
+                   .map(Ellyment::get)
+                   .collect(Collectors.joining(" "))
+                   + kind.getSplitter();
     }
 }

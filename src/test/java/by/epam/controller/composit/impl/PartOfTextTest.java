@@ -6,15 +6,15 @@ import org.junit.Test;
 
 public class PartOfTextTest {
 
-    private final PartOfText text = new PartOfText(PartOfTextKind.TEXT);
-    private final PartOfText part = new PartOfText(PartOfTextKind.PARAGRAPH);
-    private final PartOfText sentence = new PartOfText(PartOfTextKind.SENTENCE);
+    private final PartOfTextContainer text = new PartOfTextContainer(PartOfTextKind.TEXT);
+    private final PartOfTextContainer part = new PartOfTextContainer(PartOfTextKind.PARAGRAPH);
+    private final PartOfTextContainer sentence = new PartOfTextContainer(PartOfTextKind.SENTENCE);
 
     @Before
     public void prepare(){
-        sentence.add(new Word("abcdfdg"));
-        sentence.add(new Word("abc"));
-        sentence.add(new Word("abcfdsfs"));
+        sentence.add(new WordEllyment("abcdfdg"));
+        sentence.add(new WordEllyment("abc"));
+        sentence.add(new WordEllyment("abcfdsfs"));
 
         part.add(sentence);
         part.add(sentence);
