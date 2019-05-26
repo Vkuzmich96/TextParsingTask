@@ -3,9 +3,7 @@ package by.epam.controller.composit.impl;
 import by.epam.bean.PartOfText;
 import by.epam.controller.composit.Container;
 import by.epam.controller.composit.Ellyment;
-import by.epam.controller.composit.PartOfTextKind;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class PartOfTextContainer implements Container {

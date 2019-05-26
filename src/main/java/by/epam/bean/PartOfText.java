@@ -1,7 +1,7 @@
 package by.epam.bean;
 
 import by.epam.controller.composit.Ellyment;
-import by.epam.controller.composit.PartOfTextKind;
+import by.epam.controller.builder.PartOfTextKind;
 
 import java.util.List;
 

@@ -7,13 +7,13 @@ public class BuilderChainFactory {
 
     private final static BuilderChainFactory factory = new BuilderChainFactory();
 
-    private final Map<BuilderKey, BuilderChain> map = new HashMap<>();
+    private final Map<BuilderKey, ChainEllyment> map = new HashMap<>();
 
     public static BuilderChainFactory getInstance() {
         return factory;
     }
 
-    public BuilderChain get(BuilderKey key){
+    public ChainEllyment get(BuilderKey key){
         return map.get(key);
     }
 

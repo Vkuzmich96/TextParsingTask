@@ -1,7 +1,7 @@
-package by.epam.controller.composit;
+package by.epam.controller.builder;
 
 public enum PartOfTextKind {
-    PARAGRAPH("\n"), SENTENCE("."), TEXT("\n");
+    PARAGRAPH("\n"), SENTENCE("."), TEXT("\n"), WORD(" ") ;
 
     private String splitter;
 
