@@ -1,6 +1,7 @@
 package by.epam.controller.builder.impl;
 
 import by.epam.bean.Word;
+import by.epam.controller.builder.Delimiters;
 import by.epam.controller.composit.Ellyment;
 
 import by.epam.controller.composit.impl.WordEllyment;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class WordBuilder {
     public List<Ellyment> build(String text) {
-        String[] strings = text.split(" ");
+        String[] strings = text.split(Delimiters.WORD);
         return createWords(strings);
     }
 
