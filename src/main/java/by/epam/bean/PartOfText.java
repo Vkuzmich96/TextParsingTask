@@ -22,6 +22,10 @@ public class PartOfText {
         return list;
     }
 
+    public void add (Ellyment ellyment) {
+        list.add(ellyment);
+    }
+
     public void setKind(PartOfTextKind kind) {
         this.kind = kind;
     }

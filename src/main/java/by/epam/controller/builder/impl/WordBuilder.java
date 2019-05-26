@@ -1,5 +1,6 @@
 package by.epam.controller.builder.impl;
 
+import by.epam.bean.Word;
 import by.epam.controller.composit.Ellyment;
 
 import by.epam.controller.composit.impl.WordEllyment;
@@ -16,7 +17,7 @@ public class WordBuilder {
     private List<Ellyment> createWords(String[] strings) {
         List<Ellyment> list = new ArrayList<>();
         for (String string : strings){
-            list.add(new WordEllyment(string));
+            list.add(new WordEllyment(new Word(string)));
         }
         return list;
     }

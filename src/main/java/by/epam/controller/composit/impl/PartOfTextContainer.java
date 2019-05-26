@@ -1,5 +1,6 @@
 package by.epam.controller.composit.impl;
 
+import by.epam.bean.PartOfText;
 import by.epam.controller.composit.Container;
 import by.epam.controller.composit.Ellyment;
 import by.epam.controller.composit.PartOfTextKind;
@@ -8,28 +9,22 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class PartOfTextContainer implements Container {
-    private PartOfTextKind kind;
-    private List<Ellyment> list;
+    private PartOfText text;
 
-    public PartOfTextContainer(PartOfTextKind kind, List<Ellyment> list) {
-        this.kind = kind;
-        this.list = list;
-    }
-
-    public PartOfTextContainer(PartOfTextKind kind) {
-        this.kind = kind;
+    public PartOfTextContainer(PartOfText text) {
+        this.text = text;
     }
 
     @Override
     public void add(Ellyment ellyment) {
-        list.add(ellyment);
+        text.add(ellyment);
     }
 
     @Override
     public String get() {
-        return list.stream()
-                   .map(Ellyment::get)
-                   .collect(Collectors.joining(" "))
-                   + kind.getSplitter();
+        return text.getList().stream()
+                             .map(Ellyment::get)
+                             .collect(Collectors.joining(" "))
+                             +text.getKind().getSplitter();
     }
 }
