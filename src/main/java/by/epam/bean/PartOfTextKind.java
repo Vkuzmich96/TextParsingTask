@@ -1,4 +1,4 @@
-package by.epam.controller.builder;
+package by.epam.bean;
 
 public enum PartOfTextKind {
     PARAGRAPH("\n"), SENTENCE("."), TEXT("\n"), WORD(" ") ;

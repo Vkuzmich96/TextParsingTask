@@ -2,9 +2,9 @@ package by.epam.controller.builder.impl;
 
 import by.epam.bean.PartOfText;
 import by.epam.controller.builder.ChainEllyment;
-import by.epam.controller.builder.PartOfTextKind;
-import by.epam.controller.composit.Ellyment;
-import by.epam.controller.composit.impl.PartOfTextContainer;
+import by.epam.bean.PartOfTextKind;
+import by.epam.composit.Ellyment;
+import by.epam.composit.impl.PartOfTextContainer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +12,9 @@ import java.util.regex.Pattern;
 
 public class BuilderChainContainer implements ChainEllyment<BuilderChainContainer> {
     protected Pattern DELIMITER;
+    protected PartOfTextKind kind;
     protected BuilderChainContainer builder;
-    private PartOfTextKind kind;
+
 
     public BuilderChainContainer(Pattern delimiter, PartOfTextKind kind) {
         this.DELIMITER = delimiter;

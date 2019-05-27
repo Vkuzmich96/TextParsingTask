@@ -1,4 +1,4 @@
-package by.epam.controller.composit.impl;
+package by.epam.composit.impl;
 
 public class PartOfTextTest {
 //

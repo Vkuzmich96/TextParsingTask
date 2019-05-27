@@ -1,9 +1,12 @@
-package by.epam.controller.composit.impl;
+package by.epam.composit.impl;
 
 import by.epam.bean.PartOfText;
-import by.epam.controller.composit.Container;
-import by.epam.controller.composit.Ellyment;
+import by.epam.bean.PartOfTextKind;
+import by.epam.composit.Container;
+import by.epam.composit.Ellyment;
+import by.epam.service.Sorter;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class PartOfTextContainer implements Container {
@@ -11,6 +14,14 @@ public class PartOfTextContainer implements Container {
 
     public PartOfTextContainer(PartOfText text) {
         this.text = text;
+    }
+
+    public void sort(Sorter sorter) {
+        sorter.sort(text.getList());
+    }
+
+    public List<Ellyment> getList(){
+        return text.getList();
     }
 
     @Override
