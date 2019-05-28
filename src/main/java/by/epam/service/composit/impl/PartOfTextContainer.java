@@ -1,10 +1,9 @@
-package by.epam.composit.impl;
+package by.epam.service.composit.impl;
 
 import by.epam.bean.PartOfText;
-import by.epam.bean.PartOfTextKind;
-import by.epam.composit.Container;
-import by.epam.composit.Ellyment;
-import by.epam.service.Sorter;
+import by.epam.service.composit.Container;
+import by.epam.service.composit.Ellyment;
+import by.epam.service.sorter.Sorter;
 
 import java.util.List;
 import java.util.stream.Collectors;

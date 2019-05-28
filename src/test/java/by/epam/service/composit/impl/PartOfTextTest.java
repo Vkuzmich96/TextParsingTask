@@ -1,4 +1,4 @@
-package by.epam.composit.impl;
+package by.epam.service.composit.impl;
 
 public class PartOfTextTest {
 //

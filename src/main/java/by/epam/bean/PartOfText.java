@@ -1,6 +1,6 @@
 package by.epam.bean;
 
-import by.epam.composit.Ellyment;
+import by.epam.service.composit.Ellyment;
 
 import java.util.List;
 

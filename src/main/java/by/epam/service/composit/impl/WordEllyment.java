@@ -1,7 +1,7 @@
-package by.epam.composit.impl;
+package by.epam.service.composit.impl;
 
 import by.epam.bean.Word;
-import by.epam.composit.Ellyment;
+import by.epam.service.composit.Ellyment;
 
 public class WordEllyment implements Ellyment {
 

@@ -3,9 +3,9 @@ package by.epam.controller.builder.impl;
 import by.epam.bean.Word;
 import by.epam.controller.builder.Delimiters;
 import by.epam.bean.PartOfTextKind;
-import by.epam.composit.Ellyment;
+import by.epam.service.composit.Ellyment;
 
-import by.epam.composit.impl.WordEllyment;
+import by.epam.service.composit.impl.WordEllyment;
 
 import java.util.ArrayList;
 import java.util.List;

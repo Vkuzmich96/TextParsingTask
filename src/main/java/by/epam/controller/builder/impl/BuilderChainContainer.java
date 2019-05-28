@@ -3,8 +3,8 @@ package by.epam.controller.builder.impl;
 import by.epam.bean.PartOfText;
 import by.epam.controller.builder.ChainEllyment;
 import by.epam.bean.PartOfTextKind;
-import by.epam.composit.Ellyment;
-import by.epam.composit.impl.PartOfTextContainer;
+import by.epam.service.composit.Ellyment;
+import by.epam.service.composit.impl.PartOfTextContainer;
 
 import java.util.ArrayList;
 import java.util.List;

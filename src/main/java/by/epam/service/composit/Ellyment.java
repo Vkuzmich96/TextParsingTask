@@ -1,4 +1,4 @@
-package by.epam.composit;
+package by.epam.service.composit;
 
 public interface Ellyment {
      String get();

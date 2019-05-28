@@ -1,7 +1,6 @@
-package by.epam.composit;
+package by.epam.service.composit;
 
-import by.epam.bean.PartOfTextKind;
-import by.epam.service.Sorter;
+import by.epam.service.sorter.Sorter;
 
 
 public interface Container extends Ellyment {

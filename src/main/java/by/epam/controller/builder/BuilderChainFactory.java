@@ -4,7 +4,7 @@ import by.epam.bean.PartOfTextKind;
 import by.epam.controller.builder.impl.BuilderChainContainer;
 import by.epam.controller.builder.impl.TextBuilder;
 import by.epam.controller.builder.impl.WordBuilder;
-import by.epam.composit.Ellyment;
+import by.epam.service.composit.Ellyment;
 
 import java.util.HashMap;
 import java.util.Map;
