@@ -1,6 +1,7 @@
 package by.epam.controller.builder.impl;
 
 import by.epam.bean.PartOfText;
+import by.epam.controller.ControllerException;
 import by.epam.controller.builder.ChainEllyment;
 import by.epam.bean.PartOfTextKind;
 import by.epam.service.composit.Ellyment;
@@ -38,7 +39,7 @@ public class BuilderChainContainer implements ChainEllyment<BuilderChainContaine
         return builder != null ? builder.build(string) : new ArrayList<>();
     }
 
-    public BuilderChainContainer linkWith(BuilderChainContainer builder){
+    public BuilderChainContainer linkWith(BuilderChainContainer builder) throws ControllerException {
         this.builder = builder;
         return builder;
     }

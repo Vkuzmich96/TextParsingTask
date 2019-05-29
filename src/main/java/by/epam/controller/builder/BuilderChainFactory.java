@@ -1,15 +1,18 @@
 package by.epam.controller.builder;
 
 import by.epam.bean.PartOfTextKind;
+import by.epam.controller.ControllerException;
 import by.epam.controller.builder.impl.BuilderChainContainer;
 import by.epam.controller.builder.impl.TextBuilder;
 import by.epam.controller.builder.impl.WordBuilder;
 import by.epam.service.composit.Ellyment;
+import org.apache.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class BuilderChainFactory {
+    final static Logger logger = Logger.getLogger(BuilderChainFactory.class);
 
     private final static BuilderChainFactory factory = new BuilderChainFactory();
 
@@ -23,11 +26,15 @@ public class BuilderChainFactory {
         return map.get(key);
     }
 
-    private BuilderChainFactory(){
+    private BuilderChainFactory()  {
         TextBuilder builder = new TextBuilder();
-        builder.linkWith(new BuilderChainContainer(Delimiters.PARAGRAPH, PartOfTextKind.PARAGRAPH))
-               .linkWith(new BuilderChainContainer(Delimiters.SENTENCE, PartOfTextKind.SENTENCE))
-               .linkWith(new WordBuilder());
+        try {
+            builder.linkWith(new BuilderChainContainer(Delimiters.PARAGRAPH, PartOfTextKind.PARAGRAPH))
+                   .linkWith(new BuilderChainContainer(Delimiters.SENTENCE, PartOfTextKind.SENTENCE))
+                   .linkWith(new WordBuilder());
+        } catch (ControllerException e) {
+            logger.error(e.getMessage());
+        }
 
         map.put(BuilderKey.TEXT_PARSER, builder);
 

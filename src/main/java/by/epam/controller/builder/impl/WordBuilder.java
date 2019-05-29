@@ -1,6 +1,7 @@
 package by.epam.controller.builder.impl;
 
 import by.epam.bean.Word;
+import by.epam.controller.ControllerException;
 import by.epam.controller.builder.Delimiters;
 import by.epam.bean.PartOfTextKind;
 import by.epam.service.composit.Ellyment;
@@ -16,8 +17,8 @@ public class WordBuilder extends BuilderChainContainer {
         super(Delimiters.WORD, PartOfTextKind.WORD);
     }
 
-    public List<Ellyment> build(String text) {
-        String[] strings = split(text);
+    public List<Ellyment> build(String sentence) {
+        String[] strings = split(sentence);
         return createWords(strings);
     }
 
@@ -29,6 +30,7 @@ public class WordBuilder extends BuilderChainContainer {
         return list;
     }
 
-    public BuilderChainContainer linkWith(BuilderChainContainer builder){
-        throw new ClassCastException("trying use linkWith on last cain ellyment");
-    }}
+    public BuilderChainContainer linkWith(BuilderChainContainer builder) throws ControllerException {
+        throw new ControllerException("trying use linkWith on last cain ellyment");
+    }
+}

@@ -17,7 +17,5 @@ public class Runner {
         System.out.println(controller.show());
         controller.sort();
         System.out.println(controller.show());
-
-
     }
 }

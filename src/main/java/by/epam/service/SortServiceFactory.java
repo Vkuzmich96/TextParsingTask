@@ -1,7 +1,7 @@
 package by.epam.service;
 
-import by.epam.service.comparator.CompareParagraphsBySize;
-import by.epam.service.sorter.impl.ParagraphSorter;
+import by.epam.service.sorter.SorterFactory;
+import by.epam.service.sorter.SorterKey;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,9 +22,7 @@ public class SortServiceFactory {
     private SortServiceFactory(){
         map.put(SortServiceKey.SORT_ELLYMENT_SERVICE_KEY,
                 new EllymentSortService(
-                    new ParagraphSorter(
-                        new CompareParagraphsBySize()
-                    )
+                        SorterFactory.getInstance().get(SorterKey.SORT_PARAGRAPHS_BY_SIZE)
                 )
         );
     }
